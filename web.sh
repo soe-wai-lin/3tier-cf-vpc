@@ -7,8 +7,7 @@ sudo yum -y install httpd
 sudo systemctl enable httpd
 sudo systemctl start httpd
 
-sudo echo '<!DOCTYPE html>
-
+cat <<EOT > /var/www/html/index.html
 <!doctype html>
 <html lang="en">
 <head>
