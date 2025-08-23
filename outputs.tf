@@ -32,3 +32,22 @@ output "data_02_id" {
   value       = aws_subnet.terra_vpc_data_02.id
   description = "ID of terra_vpc_data_02"
 }
+
+output "cloudfront" {
+  value = aws_cloudfront_distribution.alb_cf.domain_name
+}
+
+output "web-lb" {
+  value = aws_lb.web_lb.dns_name
+  description = "DNS name of web tier loadbalancer"
+}
+
+output "app-lb" {
+  value = aws_lb.app_lb.dns_name
+  description = "DNS name of app tier loadbalancer"
+}
+
+output "RDS endpoint" {
+  value = aws_db_instance.mysql_rds.endpoint
+  description = "RDS endpoint name"
+}

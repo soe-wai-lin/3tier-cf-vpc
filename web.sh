@@ -9,31 +9,37 @@ sudo systemctl start httpd
 
 sudo echo '<!DOCTYPE html>
 
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<title>A Basic HTML5 Template</title>
-
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
-			rel="stylesheet"
-		/>
-
-		<link rel="stylesheet" href="css/styles.css?v=1.0" />
-	</head>
-
-	<body>
-		<div class="wrapper">
-			<div class="container">
-				<h1>Welcome! An Apache web server has been started successfully.</h1>
-				<p>Replace this with your own index.html file in /var/www/html.</p>
-			</div>
-		</div>
-	</body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Motivation</title>
+  <style>
+    :root { --bg:#0f172a; --fg:#e2e8f0; --muted:#94a3b8; }
+    html,body { height:100%; margin:0; }
+    body {
+      display:grid;
+      place-items:center;
+      background:var(--bg);
+      color:var(--fg);
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    main {
+      max-width: 800px;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 .5rem; }
+    p  { font-size: clamp(1rem, 2.2vw, 1.25rem); color: var(--muted); margin: 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Are you alone? You have nobody. Don't be depress. Keep Moving</h1>
+    <p>You're stronger than you think.</p>
+  </main>
+</body>
 </html>
 
 <style>
@@ -80,4 +86,3 @@ sudo echo '<!DOCTYPE html>
 		font-size: 18px;
 	}
 </style>
-' > /var/www/html/index.html
