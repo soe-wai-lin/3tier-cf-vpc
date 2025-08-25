@@ -3,17 +3,17 @@
 
 
 
-![My Image](3-tier-aws.jpg)
+![My Image](image/3-tier-aws.jpg)
 
-![My Image](cf.png)
+![My Image](image/cf.png)
 
-![My Image](db.png)
+![My Image](image/db.png)
 
-![My Image](instances.png)
+![My Image](image/instances.png)
 
-![My Image](lbs.png)
+![My Image](image/lbs.png)
 
-![My Image](web.png)
+![My Image](image/web.png)
 
 
 
@@ -32,5 +32,12 @@ terraform apply -auto-approve
 ```
 ## Note
 In my case, I use key pair name "phue". In your testing environment, you need to change your key pair name.
+
+## Connection test from App server to DB
+```sh
+
+mysql -h YOUR_DB_ENDPOINT -P 3306 -u admin -p
+
+```
 
 ### THANK YOU !! 
