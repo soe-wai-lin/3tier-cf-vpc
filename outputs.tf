@@ -38,16 +38,21 @@ output "cloudfront" {
 }
 
 output "web-lb" {
-  value = aws_lb.web_lb.dns_name
+  value       = aws_lb.web_lb.dns_name
   description = "DNS name of web tier loadbalancer"
 }
 
 output "app-lb" {
-  value = aws_lb.app_lb.dns_name
+  value       = aws_lb.app_lb.dns_name
   description = "DNS name of app tier loadbalancer"
 }
 
 output "RDS-endpoint" {
-  value = aws_db_instance.mysql_rds.endpoint
+  value       = aws_db_instance.mysql_rds.endpoint
   description = "RDS endpoint name"
+}
+
+output "route_53_alb" {
+  value       = aws_route53_record.alb.name
+  description = "Route53 map with web-asg"
 }

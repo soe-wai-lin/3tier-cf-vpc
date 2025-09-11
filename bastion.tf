@@ -1,7 +1,7 @@
 resource "aws_instance" "bastion_host" {
-  ami                    = "ami-0779c82fbb81e731c"
-  instance_type          = "t2.micro"
-  key_name               = "phue"
+  ami                    = var.image_id
+  instance_type          = var.instance_type
+  key_name               = var.key_name
   subnet_id              = aws_subnet.terra_vpc_pub_01.id
   vpc_security_group_ids = [aws_security_group.bastion-sg.id]
   tags = {

@@ -3,7 +3,7 @@ resource "aws_cloudfront_distribution" "alb_cf" {
   enabled             = true
   comment             = "CloudFront in front of ALB"
   default_root_object = ""
-  depends_on = [ aws_autoscaling_group.web_asg ]
+  depends_on          = [aws_autoscaling_group.web_asg]
 
   origin {
     domain_name = aws_lb.web_lb.dns_name
@@ -40,7 +40,7 @@ resource "aws_cloudfront_distribution" "alb_cf" {
       restriction_type = "none"
     }
   }
-  
+
   viewer_certificate {
     # acm_certificate_arn      = aws_acm_certificate.cert.arn
     # ssl_support_method       = "sni-only"

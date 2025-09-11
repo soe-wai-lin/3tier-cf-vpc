@@ -24,7 +24,7 @@ resource "aws_lb_listener" "web_lb" {
 resource "aws_lb" "app_lb" {
   name               = "app-svr"
   load_balancer_type = "application"
-  internal = true
+  internal           = true
   subnets = [
     aws_subnet.terra_vpc_priv_01.id,
     aws_subnet.terra_vpc_priv_02.id

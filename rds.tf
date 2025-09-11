@@ -10,13 +10,13 @@ resource "aws_db_subnet_group" "my_db_subnet_group" {
 }
 
 resource "aws_db_instance" "mysql_rds" {
-  identifier           = "mydb-01"
+  identifier           = var.identifier
   engine               = "mysql"
   engine_version       = "8.0"
-  allocated_storage    = 20
-  instance_class       = "db.t3.micro"
-  username             = "admin"
-  password             = "153709Swl$%" # Using a variable is a better practice
+  allocated_storage    = var.rds_allocated_storage
+  instance_class       = var.rds_instance_class
+  username             = var.rds_username
+  password             = var.rds_password # Using a variable is a better practice
   skip_final_snapshot  = true
   parameter_group_name = "default.mysql8.0"
   db_subnet_group_name = aws_db_subnet_group.my_db_subnet_group.name

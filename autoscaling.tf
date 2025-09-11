@@ -1,8 +1,8 @@
 
 resource "aws_autoscaling_group" "app_asg" {
-  max_size         = 2
-  min_size         = 2
-  desired_capacity = 2
+  max_size         = var.asg_max
+  min_size         = var.asg_min
+  desired_capacity = var.asg_desired_capacity
   vpc_zone_identifier = [
     aws_subnet.terra_vpc_priv_01.id,
     aws_subnet.terra_vpc_priv_02.id
