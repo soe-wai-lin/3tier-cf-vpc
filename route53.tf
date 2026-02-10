@@ -1,5 +1,5 @@
 
-resource "aws_route53_record" "www." {
+resource "aws_route53_record" "www" {
   zone_id = "Z07696672FJAT8VAUYVQ9"
   name    = var.alb_route53
   type    = "A"

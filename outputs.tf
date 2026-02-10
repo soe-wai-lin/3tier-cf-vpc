@@ -53,6 +53,6 @@ output "RDS-endpoint" {
 }
 
 output "route_53_alb" {
-  value       = aws_route53_record.alb.name
+  value       = aws_route53_record.www.name
   description = "Route53 map with web-asg"
 }
